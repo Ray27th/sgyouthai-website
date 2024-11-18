@@ -15,7 +15,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/soh-hong-yu-ultraraptor/",
     },
     {
-      name: "Zaer Z.",
+      name: "Zaer Bin Zaqy",
       position: "SYAI Co-Founder",
       img: "team/Zaer.png",
       linkedin: "https://www.linkedin.com/in/zaerzaqy/",
