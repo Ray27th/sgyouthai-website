@@ -98,7 +98,7 @@ export default function Team() {
                   className="rounded-full aspect-square w-44 object-contain mb-2"
                 />
                 <p className="text-lg text-center">{e.name}</p>
-                <p class name="text-center">{e.position}</p>
+                <p className="text-center">{e.position}</p>
               </div>
             </Link>
           );
