@@ -6,9 +6,11 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Initiatives from "@/components/Initiatives";
 import Partner from "@/components/Partner";
+import Events from "@/components/Events";
 import Contact from "@/components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -71,9 +73,10 @@ export default function Home() {
         <Partner />
       </div>
 
-      <div id="Events">
-        <Initiatives />
+      <div id="Events" className="bg-[#004a99] text-[#eee]">
+        <Events />
       </div>
+      <Gallery />
 
       <div id="Contact" className="bg-[#004a99] text-[#eee]">
         <Contact />
