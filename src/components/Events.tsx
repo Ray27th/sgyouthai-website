@@ -31,7 +31,7 @@ export default function Events() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Our Past Events</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 pt-12 gap-6 justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 pt-12 gap-6 justify-center items-center mx-auto">
           {events.map((event, idx) => (
             <div
               key={event.name + idx}
