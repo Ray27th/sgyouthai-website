@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Initiatives from "@/components/Initiatives";
+import Team from "@/components/Team";
 import Partner from "@/components/Partner";
 import Events from "@/components/Events";
 import Contact from "@/components/Contact";
@@ -63,7 +64,7 @@ export default function Home() {
       </div>
 
       <div id="Team">
-        <Initiatives />
+        <Team />
       </div>
 
       <div

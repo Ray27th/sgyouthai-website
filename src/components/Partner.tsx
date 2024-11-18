@@ -24,7 +24,7 @@ export default function Partner() {
           {partners.map((partner) => (
             <div
               key={partner.id}
-              className="flex flex-grow w-1/3 items-center justify-center bg-white border-[#d6eaff] border p-8"
+              className="flex flex-grow w-full md:w-1/3 items-center justify-center bg-white border-[#d6eaff] border p-8"
             >
               <img
                 src={partner.src}

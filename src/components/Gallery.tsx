@@ -12,7 +12,7 @@ export default function Gallery() {
       >
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/AWS Deeprace Dash/photo_2024-04-11_22-35-26.jpg"
+            src="/events/AWS Deeprace Dash/photo_2024-04-11_22-35-26.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -23,7 +23,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/AWS Deeprace Dash/photo_2024-04-11_22-35-34.jpg"
+            src="/events/AWS Deeprace Dash/photo_2024-04-11_22-35-34.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -34,7 +34,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/AWS Deeprace Dash/photo_2024-04-11_22-37-17.jpg"
+            src="/events/AWS Deeprace Dash/photo_2024-04-11_22-37-17.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -45,7 +45,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Cedar Girls Secondary School/photo_2024-04-22_17-46-19.jpg"
+            src="/events/Cedar Girls Secondary School/photo_2024-04-22_17-46-19.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -58,7 +58,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Cedar Girls Secondary School/photo_2024-04-22_17-46-24.jpg"
+            src="/events/Cedar Girls Secondary School/photo_2024-04-22_17-46-24.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -71,7 +71,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/MindfulHacks x Singapore Youth AI/photo_2024-04-22_17-47-37.jpg"
+            src="/events/MindfulHacks x Singapore Youth AI/photo_2024-04-22_17-47-37.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -84,7 +84,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/MindfulHacks x Singapore Youth AI/photo_2024-04-22_17-47-54.jpg"
+            src="/events/MindfulHacks x Singapore Youth AI/photo_2024-04-22_17-47-54.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -97,7 +97,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-20-51.jpg"
+            src="/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-20-51.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -110,7 +110,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-20-59.jpg"
+            src="/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-20-59.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -123,7 +123,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-21-01.jpg"
+            src="/events/Singapore Youth AI inaugural community gathering/photo_2024-04-11_22-21-01.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -136,7 +136,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Youth Action Challenge/photo_2024-04-11_22-44-47.jpg"
+            src="/events/Youth Action Challenge/photo_2024-04-11_22-44-47.jpg"
             className="w-full h-auto"
             alt=""
           />
@@ -147,7 +147,7 @@ export default function Gallery() {
 
         <div className="overflow-hidden bg-white rounded-lg shadow-md">
           <img
-            src="assets/img/events/Youth Action Challenge/Screenshot 2024-04-11 224643.png"
+            src="/events/Youth Action Challenge/Screenshot 2024-04-11 224643.png"
             className="w-full h-auto"
             alt=""
           />
