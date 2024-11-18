@@ -26,6 +26,54 @@ export default function Team() {
       img: "team/Cleveland.jpg",
       linkedin: "https://www.linkedin.com/in/cleveland-law-a381ab242/",
     },
+    {
+      name: "Dex Yang",
+      position: "Head of Events",
+      img: "team/Dex.png",
+      linkedin: "https://www.linkedin.com",
+    },
+    {
+      name: "Xie Kaiwen",
+      position: "Head of Events",
+      img: "team/Kaiwen.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Matthias Loong",
+      position: "Head of Events",
+      img: "team/Matthias.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Vaithiyanathan Sri Kesava Raman",
+      position: "Head of Events",
+      img: "team/Raman.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Thue Zhan Wei Aden",
+      position: "Head of Outreach",
+      img: "team/Cleveland.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Sanfo Bimal Thomas",
+      position: "Head of Outreach",
+      img: "team/Sanfo.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Nicole Michaella Daduya",
+      position: "Head of Social",
+      img: "team/Nicole.png",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Rachel Lim Le Shi",
+      position: "Head of Social",
+      img: "team/Rachel.png",
+      linkedin: "https://www.linkedin.com/",
+    },
   ];
 
   return (
