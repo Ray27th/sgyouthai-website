@@ -8,6 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/linkinbio" element={<Home />} />
         {/* 404 ERROR */}
         <Route path="/*" element={<Error />} />
       </Route>
