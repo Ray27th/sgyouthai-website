@@ -95,7 +95,7 @@ export default function Team() {
               >
                 <img
                   src={e.img}
-                  className="rounded-full aspect-square w-44 object-contain mb-2"
+                  className="rounded-full aspect-square w-44 object-cover mb-2"
                 />
                 <p className="text-lg text-center">{e.name}</p>
                 <p className="text-center">{e.position}</p>
