@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Initiatives from "@/components/Initiatives";
+import Partner from "@/components/Partner";
 import Contact from "@/components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -67,7 +68,7 @@ export default function Home() {
         id="Partner"
         className="bg-[#ecf5ff] shadow-[inset_0px_0px_12px_0px_rgba(0,0,0,0.1)]"
       >
-        <Initiatives />
+        <Partner />
       </div>
 
       <div id="Events">

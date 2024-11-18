@@ -11,7 +11,7 @@ import Logo from "@/assets/logo.png";
 import { scrollWithOffset } from "@/lib/utils";
 
 export default function Navbar() {
-  let link = [
+  const link = [
     { href: "#", name: "Home" },
     { href: "#About", name: "About" },
     { href: "#Initiatives", name: "Initiatives" },

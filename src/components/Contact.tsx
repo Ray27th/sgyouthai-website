@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin } from "lucide-react";
 
 export default function Contact() {
-  let socials = [
+  const socials = [
     {
       name: "Instagram",
       icon: <Instagram style={{ width: "1.15rem", height: "1.15rem" }} />,
