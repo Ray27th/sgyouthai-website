@@ -53,7 +53,7 @@ export default function Team() {
     {
       name: "Thue Zhan Wei Aden",
       position: "Head of Outreach",
-      img: "team/Cleveland.png",
+      img: "team/Aden.png",
       linkedin: "https://www.linkedin.com/",
     },
     {
