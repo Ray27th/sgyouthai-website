@@ -31,7 +31,8 @@ export default function Events() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Our Past Events</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 pt-12 gap-6 justify-center items-center mx-auto">
+      <div className="flex flex-col md:flex-row pt-12 gap-6 justify-center items-center">
+        <div className="flex flex-wrap w-full gap-8 justify-center items-center">
           {events.map((event, idx) => (
             <div
               key={event.name + idx}
@@ -41,6 +42,7 @@ export default function Events() {
               <span className="h-1/2">{event.name}</span>
             </div>
           ))}
+        </div>
       </div>
     </section>
   );
