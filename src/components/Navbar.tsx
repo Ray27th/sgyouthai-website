@@ -8,25 +8,26 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import Logo from "@/assets/logo.png";
+import { scrollWithOffset } from "@/lib/utils";
 
 export default function Navbar() {
   let link = [
-    { href: "/#", name: "Home" },
-    { href: "/#About", name: "About" },
+    { href: "#", name: "Home" },
+    { href: "#About", name: "About" },
     { href: "#Initiatives", name: "Initiatives" },
-    { href: "#", name: "Team" },
-    { href: "#", name: "Partner Organisation" },
-    { href: "#", name: "Past Events" },
-    { href: "#", name: "Contact" },
+    { href: "#Team", name: "Team" },
+    { href: "#Partner", name: "Partner Organisation" },
+    { href: "#Events", name: "Past Events" },
+    { href: "#Contact", name: "Contact" },
   ];
 
   return (
-    <div className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full top-0 left-0 right-0 z-10 h-[80px]">
-      <Link to="/" className="flex items-center gap-2">
+    <div className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full max-w-[100vw] top-0 left-0 right-0 z-10 h-[80px] shadow-md">
+      <Link to="/" className="flex items-center gap-2 w-max">
         <img src={Logo} className="h-[3.25rem] w-[3.25rem]" />
         <span className="text-base font-semibold">Singapore Youth AI</span>
       </Link>
-      <div className="hidden md:flex gap-4">
+      <div className="hidden md:flex gap-8 items-center">
         {link.map((e, i) => {
           return (
             <NavHashLink
@@ -34,6 +35,7 @@ export default function Navbar() {
               to={e.href}
               smooth
               className="text-base hover:underline underline-offset-4"
+              scroll={(el) => scrollWithOffset(el)}
             >
               {e.name}
             </NavHashLink>
@@ -56,6 +58,7 @@ export default function Navbar() {
                     key={"Link" + i + e.name}
                     to={e.href}
                     className="text-base hover:underline underline-offset-4"
+                    scroll={(el) => scrollWithOffset(el)}
                     smooth
                   >
                     {e.name}

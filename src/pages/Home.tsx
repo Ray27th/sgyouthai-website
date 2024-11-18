@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import heroBG from "@/assets/hero-bg.png";
-import heroImg from "@/assets/hero-img.svg";
 import { HashLink } from "react-router-hash-link";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Initiatives from "@/components/Initiatives";
+import Contact from "@/components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
   const [showTopButton, setShowTopButton] = useState(false);
 
-  // Handle scrolling
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -27,7 +28,6 @@ export default function Home() {
     };
   }, []);
 
-  // Scroll to the top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -40,57 +40,49 @@ export default function Home() {
       once: true,
       easing: "ease-in-out",
       duration: 1000,
+      mirror: false,
     });
   }, []);
 
   return (
     <>
       <Navbar />
+      <Hero />
+      <div id="About">
+        <About />
+      </div>
+
       <div
-        className="h-[95vh] bg-cover relative bg-bottom bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroBG})`,
-        }}
+        id="Initiatives"
+        className="bg-[#ecf5ff] shadow-[inset_0px_0px_12px_0px_rgba(0,0,0,0.1)]"
       >
-        <div className="w-full h-full " data-aos="fade-up">
-          <div className="w-full flex flex-col-reverse md:flex-row absolute left-0 top-1/2 -translate-y-1/2 px-5 mt-10 md:mt-0 lg:px-24 justify-around items-center gap-2">
-            <div
-              className="md:w-1/2 max-w-[700px]  w-full flex flex-col gap-8 items-center justify-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <h2 className="text-white text-4xl md:text-5xl xl:text-6xl font-semibold text-center md:text-left">
-                Creating a community to{" "}
-                <span className="underline text-[#74b5fc]">empower youth</span>{" "}
-                to solve real-world problems using AI
-              </h2>
-              <Button variant={"secondary"} asChild>
-                <HashLink to={"#About"} smooth>
-                  Read More
-                </HashLink>
-              </Button>
-            </div>
-            <img
-              src={heroImg}
-              className="md:w-1/2 max-w-[800px] w-full"
-              data-aos="zoom-out"
-              data-aos-delay="200"
-            />
-          </div>
-        </div>
+        <Initiatives />
       </div>
-      <div className="h-[96vh]" id="About">
-        About Us
+
+      <div id="Team">
+        <Initiatives />
       </div>
-      <div className="h-[96vh]" id="Initiatives">
-        Initiatives
+
+      <div
+        id="Partner"
+        className="bg-[#ecf5ff] shadow-[inset_0px_0px_12px_0px_rgba(0,0,0,0.1)]"
+      >
+        <Initiatives />
+      </div>
+
+      <div id="Events">
+        <Initiatives />
+      </div>
+
+      <div id="Contact" className="bg-[#004a99] text-[#eee]">
+        <Contact />
       </div>
 
       {/* Return to Top Button */}
       {showTopButton && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 z-50 bg-[#74b5fc] text-white p-3 rounded-full shadow-lg hover:bg-[#5699d1] transition"
+          className="fixed bottom-5 right-5 z-50 rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
         >
           <HashLink to={"#"} smooth>
             ↑
