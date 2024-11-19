@@ -50,7 +50,7 @@ export default function Navbar() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <div className="grid gap-4 w-[200px] p-2">
+          <div className="grid gap-4 w-[200px] px-2 py-4">
             {link.map((e, i) => {
               return (
                 <SheetClose asChild>
