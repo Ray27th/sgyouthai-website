@@ -35,7 +35,7 @@ export default function Events() {
         {events.map((event, idx) => (
           <div
             key={event.name + idx}
-            className="flex flex-col gap-5 w-72 text-2xl text-center font-bold aspect-square items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
+            className="flex flex-col gap-5 text-2xl text-center font-bold aspect-square items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
           >
             <CalendarDays style={{ width: "2.75rem", height: "2.75rem" }} />
             <span className="h-1/2">{event.name}</span>
