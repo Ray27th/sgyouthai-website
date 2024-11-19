@@ -31,18 +31,16 @@ export default function Events() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Our Past Events</h2>
-      <div className="flex flex-col md:flex-row pt-12 gap-6 justify-center items-center">
-        <div className="flex flex-wrap w-full gap-8 justify-center items-center">
-          {events.map((event, idx) => (
-            <div
-              key={event.name + idx}
-              className="flex flex-col gap-5 w-72 text-2xl text-center font-bold aspect-square items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
-            >
-              <CalendarDays style={{ width: "2.75rem", height: "2.75rem" }} />
-              <span className="h-1/2">{event.name}</span>
-            </div>
-          ))}
-        </div>
+      <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {events.map((event, idx) => (
+          <div
+            key={event.name + idx}
+            className="flex flex-col gap-5 w-72 text-2xl text-center font-bold aspect-square items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
+          >
+            <CalendarDays style={{ width: "2.75rem", height: "2.75rem" }} />
+            <span className="h-1/2">{event.name}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
