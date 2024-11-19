@@ -82,23 +82,21 @@ export default function Team() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Team</h2>
-      <p className="text-center py-5">
-        Meet the team behind Singapore Youth AI
-      </p>
+      <p className="text-center py-5">Meet the team behind Singapore Youth AI</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {team.map((e, idx) => {
           return (
-            <Link to={e.linkedin}>
+            <Link to={e.linkedin} key={"Team" + idx}>
               <div
-                className="flex flex-col gap-1 items-center justify-center"
-                key={"Team" + idx}
+                className="flex flex-col gap-1 items-center justify-center bg-white p-5 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-100"
               >
                 <img
                   src={e.img}
                   className="rounded-full aspect-square w-44 object-cover mb-2"
+                  alt={e.name}
                 />
-                <p className="text-lg text-center">{e.name}</p>
-                <p className="text-center">{e.position}</p>
+                <p className="text-lg text-center font-semibold">{e.name}</p>
+                <p className="text-center text-gray-500">{e.position}</p>
               </div>
             </Link>
           );
