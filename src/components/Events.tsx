@@ -31,14 +31,14 @@ export default function Events() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Our Past Events</h2>
-      <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="pt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {events.map((event, idx) => (
           <div
             key={event.name + idx}
-            className="flex flex-col gap-5 text-2xl text-center font-bold aspect-square items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
+            className="flex flex-col gap-5 w-full max-w-sm text-xl md:text-2xl lg:text-lg text-center font-bold items-center justify-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md"
           >
-            <CalendarDays style={{ width: "2.75rem", height: "2.75rem" }} />
-            <span className="h-1/2">{event.name}</span>
+            <CalendarDays style={{ width: "2.5rem", height: "2.5rem" }} />
+            <span className="break-words">{event.name}</span>
           </div>
         ))}
       </div>
