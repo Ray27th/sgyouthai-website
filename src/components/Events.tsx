@@ -37,11 +37,9 @@ export default function Events() {
             key={event.name + idx}
             className="flex flex-col gap-5 w-full max-w-sm text-2xl md:text-xl lg:text-lg text-center font-bold items-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md aspect-square"
           >
-            {/* Fixed Calendar Position */}
-            <div className="self-start">
+            <div className="self-center">
               <CalendarDays style={{ width: "2.5rem", height: "2.5rem" }} />
             </div>
-            {/* Centered Text */}
             <div className="flex-grow flex items-center justify-center">
               <span className="break-words">{event.name}</span>
             </div>
