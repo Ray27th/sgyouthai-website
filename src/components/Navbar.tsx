@@ -50,14 +50,14 @@ export default function Navbar() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <div className="grid gap-2 w-[200px] p-4">
+          <div className="grid gap-4 w-[200px] p-2">
             {link.map((e, i) => {
               return (
                 <SheetClose asChild>
                   <NavHashLink
                     key={"Link" + i + e.name}
                     to={e.href}
-                    className="text-base hover:underline underline-offset-4"
+                    className="text-lg hover:underline underline-offset-4"
                     scroll={(el) => scrollWithOffset(el)}
                     smooth
                   >
