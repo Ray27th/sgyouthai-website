@@ -35,10 +35,16 @@ export default function Events() {
         {events.map((event, idx) => (
           <div
             key={event.name + idx}
-            className="flex flex-col gap-5 w-full max-w-sm text-2xl md:text-xl lg:text-lg text-center font-bold items-center justify-between bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md aspect-square"
+            className="flex flex-col gap-5 w-full max-w-sm text-2xl md:text-xl lg:text-lg text-center font-bold items-center bg-[#00458f] hover:bg-[#003b7a] p-8 rounded-md aspect-square"
           >
-            <CalendarDays style={{ width: "2.5rem", height: "2.5rem" }} />
-            <span className="break-words">{event.name}</span>
+            {/* Fixed Calendar Position */}
+            <div className="self-start">
+              <CalendarDays style={{ width: "2.5rem", height: "2.5rem" }} />
+            </div>
+            {/* Centered Text */}
+            <div className="flex-grow flex items-center justify-center">
+              <span className="break-words">{event.name}</span>
+            </div>
           </div>
         ))}
       </div>
