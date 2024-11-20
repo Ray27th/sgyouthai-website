@@ -4,6 +4,11 @@ import heroBG from "@/assets/hero-bg.png";
 import Logo from "@/assets/logo.png";
 
 export default function LinkInBio() {
+
+  const socials = [];
+
+  const links = [];
+  
   const [showHeader, setShowHeader] = useState(true);
 
   useEffect(() => {
@@ -29,7 +34,7 @@ export default function LinkInBio() {
         backgroundImage: `url(${heroBG})`,
       }}
     >
-      <div className={cn("fixed p-5 top-5 w-full flex justify-between transition-all", showHeader ? "opacity-1" : "opacity-0")}>
+      <div className={cn("fixed px-5 top-5 w-full flex justify-between transition-all", showHeader ? "opacity-1" : "opacity-0")}>
         <div>btn1</div>
         <div>btn2</div>
       </div>
