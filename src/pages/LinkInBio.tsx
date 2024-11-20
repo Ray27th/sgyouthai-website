@@ -63,6 +63,7 @@ export default function LinkInBio() {
               <Link to={e.href} key={e.name + idx}>
                 <Button
                   variant="secondary"
+                  className="w-full px-6 py-4"
                 >
                   {e.name}
                 </Button>
