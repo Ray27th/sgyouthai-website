@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import SYAILogo from "@/assets/SYAI Logo.jpg";
-import { EllipsisVertical } from 'lucide-react';
+import { EllipsisVertical, Ellipsis } from 'lucide-react';
 
 export default function LinkInBio() {
   // const socials = [];
@@ -48,17 +48,17 @@ export default function LinkInBio() {
         )}
       >
         <div>btn1</div>
-        <div>btn2</div>
+        <Button className="rounded-full"><Ellipsis /></Button>
       </div>
       <div className="container mx-auto p-5">
-        <div className="flex flex-col justify-center items-center gap-2 pt-12">
+        <div className="flex flex-col justify-center items-center gap-2 pt-10">
           <img
             src={SYAILogo}
             className="h-28 w-28 rounded-full bg-white object-contain"
           />
           <h2 className="text-xl font-bold">sgyouthai</h2>
         </div>
-        <div className="flex flex-col w-full py-8">
+        <div className="flex flex-col w-full py-7">
           {links.map((e, idx) => {
             return (
               <Link to={e.href} key={e.name + idx}>
