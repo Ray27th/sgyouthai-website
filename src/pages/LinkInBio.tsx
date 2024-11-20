@@ -39,16 +39,16 @@ export default function LinkInBio() {
         backgroundImage: `url(${heroBG})`,
       }}
     >
-      <div className="container mx-auto p-5">
-        <div
+      <div
           className={cn(
-            "fixed px-5 top-5 w-full flex justify-between transition-all",
+            "fixed px-5 top-5 w-full container mx-auto flex justify-between transition-all",
             showHeader ? "opacity-1" : "opacity-0",
           )}
         >
-          <div>btn1</div>
-          <div>btn2</div>
-        </div>
+        <div>btn1</div>
+        <div>btn2</div>
+      </div>
+      <div className="container mx-auto p-5">
         <div className="flex flex-col justify-center items-center gap-4 pt-16">
           <img
             src={Logo}
