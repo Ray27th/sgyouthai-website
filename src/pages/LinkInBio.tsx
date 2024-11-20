@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import Logo from "@/assets/logo.png";
@@ -49,7 +50,7 @@ export default function LinkInBio() {
         <div>btn2</div>
       </div>
       <div className="container mx-auto p-5">
-        <div className="flex flex-col justify-center items-center gap-4 pt-16">
+        <div className="flex flex-col justify-center items-center gap-4 pt-14">
           <img
             src={Logo}
             className="h-28 w-28 rounded-full bg-white object-contain"
@@ -59,13 +60,12 @@ export default function LinkInBio() {
         <div className="flex flex-col w-full py-5">
           {links.map((e, idx) => {
             return (
-              <Link to={e.href}>
-                <div
-                  key={e.name + idx}
-                  className="flex items-center justify-center w-full rounded-lg bg-white text-base text-[#444] px-6 py-4"
+              <Link to={e.href} key={e.name + idx}>
+                <Button
+                  variant="secondary"
                 >
                   {e.name}
-                </div>
+                </Button>
               </Link>
             );
           })}
