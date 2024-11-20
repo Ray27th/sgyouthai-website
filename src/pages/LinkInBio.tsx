@@ -24,7 +24,7 @@ export default function LinkInBio() {
 
   return (
     <div 
-      className="relative h-[200vh] bg-cover bg-no-repeat"
+      className="relative h-[200vh] bg-cover bg-no-repeat text-white"
       style={{
         backgroundImage: `url(${heroBG})`,
       }}
@@ -34,7 +34,7 @@ export default function LinkInBio() {
         <div>btn2</div>
       </div>
       <div className="flex flex-col justify-center items-center gap-4">
-        <img src={Logo} className="h-32 w-32 rounded-full" />
+        <img src={Logo} className="h-32 w-32 rounded-full bg-white object-contain" />
         <h2 className="text-lg font-bold">sgyouthai</h2>
       </div>
       <p>Link In Bio</p>
