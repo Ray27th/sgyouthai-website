@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
-import Logo from "@/assets/logo.png";
+import SYAILogo from "@/assets/SYAI Logo.jpg";
 
 export default function LinkInBio() {
   // const socials = [];
