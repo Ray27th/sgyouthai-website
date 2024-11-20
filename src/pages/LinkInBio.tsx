@@ -41,11 +41,11 @@ export default function LinkInBio() {
       }}
     >
       <div
-          className={cn(
-            "fixed px-5 top-5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
-            showHeader ? "opacity-1" : "opacity-0",
-          )}
-        >
+        className={cn(
+          "fixed px-5 top-5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
+          showHeader ? "opacity-1" : "opacity-0",
+        )}
+      >
         <div>btn1</div>
         <div>btn2</div>
       </div>
@@ -67,8 +67,8 @@ export default function LinkInBio() {
                   size="lg"
                 >
                   {e.name}
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     onClick={(e) => {
                       e.stopPropagation();
                       alert("Hello");
