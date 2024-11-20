@@ -54,7 +54,7 @@ export default function LinkInBio() {
             src={Logo}
             className="h-28 w-28 rounded-full bg-white object-contain"
           />
-          <h2 className="text-lg font-bold">sgyouthai</h2>
+          <h2 className="text-xl font-bold">sgyouthai</h2>
         </div>
         <div className="flex flex-col items-center justify-center">
           {links.map((e, idx) => {
@@ -62,7 +62,7 @@ export default function LinkInBio() {
               <Link to={e.href}>
                 <div
                   key={e.name + idx}
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-center w-full rounded-lg bg-white text-lg text-[#444] px-6 py-4"
                 >
                   {e.name}
                 </div>
