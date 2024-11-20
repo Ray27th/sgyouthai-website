@@ -38,7 +38,7 @@ export default function LinkInBio() {
         <div>btn1</div>
         <div>btn2</div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 pt-24">
+      <div className="flex flex-col justify-center items-center gap-4 pt-16">
         <img src={Logo} className="h-28 w-28 rounded-full bg-white object-contain" />
         <h2 className="text-lg font-bold">sgyouthai</h2>
       </div>
