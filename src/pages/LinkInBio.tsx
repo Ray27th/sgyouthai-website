@@ -5,9 +5,9 @@ import Logo from "@/assets/logo.png";
 
 export default function LinkInBio() {
 
-  const socials = [];
+  // const socials = [];
 
-  const links = [];
+  // const links = [];
   
   const [showHeader, setShowHeader] = useState(true);
 
