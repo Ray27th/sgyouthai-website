@@ -67,7 +67,15 @@ export default function LinkInBio() {
                   size="lg"
                 >
                   {e.name}
-                  <Button variant="ghost" onClick={(_) => alert("Hello")}>:</Button>
+                  <Button 
+                    variant="ghost" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      alert("Hello");
+                    }}
+                  >
+                    <span>:</span>
+                  </Button>
                 </Button>
               </Link>
             );
