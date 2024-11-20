@@ -52,7 +52,7 @@ export default function LinkInBio() {
       <div className="container mx-auto p-5">
         <div className="flex flex-col justify-center items-center gap-4 pt-12">
           <img
-            src={Logo}
+            src={SYAILogo}
             className="h-28 w-28 rounded-full bg-white object-contain"
           />
           <h2 className="text-xl font-bold">sgyouthai</h2>
