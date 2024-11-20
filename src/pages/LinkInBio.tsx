@@ -64,6 +64,7 @@ export default function LinkInBio() {
                 <Button
                   variant="secondary"
                   className="w-full px-6 py-4"
+                  size="lg"
                 >
                   {e.name}
                 </Button>
