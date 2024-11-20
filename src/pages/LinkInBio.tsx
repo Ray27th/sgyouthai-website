@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import SYAILogo from "@/assets/SYAI Logo.jpg";
-import { EllipsisVertical, Ellipsis } from 'lucide-react';
+import { EllipsisVertical, Ellipsis, Bell } from 'lucide-react';
 
 export default function LinkInBio() {
   // const socials = [];
@@ -43,15 +43,15 @@ export default function LinkInBio() {
     >
       <div
         className={cn(
-          "fixed px-5 top-5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
+          "fixed px-5 top-2.5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
           showHeader ? "opacity-1" : "opacity-0",
         )}
       >
-        <div>btn1</div>
-        <Button className="rounded-full"><Ellipsis /></Button>
+        <Button className="rounded-full" size="icon"><Bell /></Button>
+        <Button className="rounded-full" size="icon"><Ellipsis /></Button>
       </div>
       <div className="container mx-auto p-5">
-        <div className="flex flex-col justify-center items-center gap-2 pt-10">
+        <div className="flex flex-col justify-center items-center gap-2 pt-11">
           <img
             src={SYAILogo}
             className="h-28 w-28 rounded-full bg-white object-contain"
