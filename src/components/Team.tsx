@@ -81,7 +81,7 @@ export default function Team() {
       className="pt-8 md:pt-12 container mx-auto px-8 xl:px-24 pb-16 overflow-hidden"
       data-aos="fade-up"
     >
-      <h2 className="text-4xl text-center font-medium">Team</h2>
+      <h2 className="text-4xl text-center font-medium">Our Team</h2>
       <p className="text-center py-5">Meet the team behind Singapore Youth AI</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {team.map((e, idx) => {
