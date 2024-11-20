@@ -29,7 +29,7 @@ export default function LinkInBio() {
 
   return (
     <div 
-      className="relative h-[200vh] bg-cover bg-no-repeat text-white"
+      className="relative h-[200vh] bg-cover bg-no-repeat text-white container mx-auto"
       style={{
         backgroundImage: `url(${heroBG})`,
       }}
