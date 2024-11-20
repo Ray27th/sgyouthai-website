@@ -43,7 +43,7 @@ export default function LinkInBio() {
     >
       <div
         className={cn(
-          "fixed px-5 top-2.5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
+          "fixed px-3 top-3 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all",
           showHeader ? "opacity-1" : "opacity-0",
         )}
       >
