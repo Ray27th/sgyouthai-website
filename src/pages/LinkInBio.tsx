@@ -70,6 +70,7 @@ export default function LinkInBio() {
                   <Button
                     variant="ghost"
                     onClick={(e) => {
+                      e.preventDefault();
                       e.stopPropagation();
                       alert("Hello");
                     }}
