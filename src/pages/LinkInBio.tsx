@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import SYAILogo from "@/assets/SYAI Logo.jpg";
+import { EllipsisVertical } from 'lucide-react';
 
 export default function LinkInBio() {
   // const socials = [];
@@ -69,14 +70,14 @@ export default function LinkInBio() {
                   {e.name}
                   <Button
                     variant="ghost"
-                    className="absolute right-0"
+                    className="absolute right-2"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      alert("Hello");
+                      alert("Share Btn");
                     }}
                   >
-                    <span>:</span>
+                    <EllipsisVertical />
                   </Button>
                 </Button>
               </Link>
