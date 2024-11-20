@@ -67,7 +67,7 @@ export default function LinkInBio() {
                   size="lg"
                 >
                   {e.name}
-                  <Button variant="ghost" onClick={e => alert("Hello")}>:</Button>
+                  <Button variant="ghost" onClick={(_) => alert("Hello")}>:</Button>
                 </Button>
               </Link>
             );
