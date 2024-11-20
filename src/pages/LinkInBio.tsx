@@ -50,23 +50,24 @@ export default function LinkInBio() {
         <div>btn2</div>
       </div>
       <div className="container mx-auto p-5">
-        <div className="flex flex-col justify-center items-center gap-4 pt-12">
+        <div className="flex flex-col justify-center items-center gap-2 pt-12">
           <img
             src={SYAILogo}
             className="h-28 w-28 rounded-full bg-white object-contain"
           />
           <h2 className="text-xl font-bold">sgyouthai</h2>
         </div>
-        <div className="flex flex-col w-full py-5">
+        <div className="flex flex-col w-full py-8">
           {links.map((e, idx) => {
             return (
               <Link to={e.href} key={e.name + idx}>
                 <Button
                   variant="secondary"
-                  className="w-full px-6 py-6 text-base h-16"
+                  className="w-full px-6 py-6 text-base h-[4.5rem] relative"
                   size="lg"
                 >
                   {e.name}
+                  <Button variant="ghost" onClick={e => alert("Hello")}>:</Button>
                 </Button>
               </Link>
             );
