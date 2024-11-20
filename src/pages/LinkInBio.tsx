@@ -69,6 +69,7 @@ export default function LinkInBio() {
                   {e.name}
                   <Button
                     variant="ghost"
+                    className="absolute right-0"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
