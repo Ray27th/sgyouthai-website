@@ -5,9 +5,21 @@ import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import SYAILogo from "@/assets/SYAI Logo.jpg";
 import { EllipsisVertical, Ellipsis, Bell } from 'lucide-react';
+import { Instagram, Linkedin } from "lucide-react"; 
 
 export default function LinkInBio() {
-  // const socials = [];
+    const socials = [
+    {
+      name: "Instagram",
+      icon: <Instagram style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://www.instagram.com/sgyouthai/",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://www.linkedin.com/company/sgyouthai",
+    },
+  ];
 
   const links = [
     {
@@ -92,6 +104,18 @@ export default function LinkInBio() {
               </Link>
             );
           })}
+        </div>
+        <div className="flex flex-wrap gap-2">
+         {socials.map((e) => {
+           return (
+            <Button
+              key={"Social" + e.name}
+              className="rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            >
+              <Link to={e.href}>{e.icon}</Link>
+            </Button>
+          );
+         })}
         </div>
       </div>
     </div>
