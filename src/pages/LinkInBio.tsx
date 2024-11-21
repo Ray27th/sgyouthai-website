@@ -55,8 +55,8 @@ export default function LinkInBio() {
           showHeader ? "opacity-1" : "opacity-0",
         )}
       >
-        <Button className="rounded-full bg-neutral-900/35 hover:bg-neutral-900/15 dark:bg-neutral-50/35 dark:hover:bg-neutral-50/15" size="icon"><Bell /></Button>
-        <Button className="rounded-full bg-neutral-900/65 hover:bg-neutral-900/45 dark:bg-neutral-50/65 dark:hover:bg-neutral-50/45" size="icon"><Ellipsis /></Button>
+        <Button className="rounded-full bg-neutral-900/55 hover:bg-neutral-900/35 dark:bg-neutral-50/55 dark:hover:bg-neutral-50/25" size="icon"><Bell /></Button>
+        <Button className="rounded-full bg-neutral-900/55 hover:bg-neutral-900/35 dark:bg-neutral-50/55 dark:hover:bg-neutral-50/55" size="icon"><Ellipsis /></Button>
       </div>
       <div className="container mx-auto p-5">
         <div className="flex flex-col justify-center items-center gap-2 pt-12">
