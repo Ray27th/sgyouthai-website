@@ -66,7 +66,7 @@ export default function LinkInBio() {
           />
           <h2 className="text-xl font-bold">sgyouthai</h2>
         </div>
-        <div className="flex flex-col w-full py-7">
+        <div className="flex flex-col w-full py-7 gap-4">
           {links.map((e, idx) => {
             return (
               <Link to={e.href} key={e.name + idx}>
