@@ -105,7 +105,7 @@ export default function LinkInBio() {
             );
           })}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 items-center justify-center">
          {socials.map((e) => {
            return (
             <Button
