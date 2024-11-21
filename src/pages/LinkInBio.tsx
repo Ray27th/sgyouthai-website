@@ -78,6 +78,7 @@ export default function LinkInBio() {
                   {e.name}
                   <Button
                     variant="ghost"
+                    size="icon"
                     className="absolute right-2"
                     onClick={(e) => {
                       e.preventDefault();
