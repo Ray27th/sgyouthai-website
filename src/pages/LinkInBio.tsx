@@ -77,7 +77,10 @@ export default function LinkInBio() {
         <ShareButton
           className="rounded-full bg-neutral-900/55 hover:bg-neutral-900/35 dark:bg-neutral-50/55 dark:hover:bg-neutral-50/55"
           size="icon"
-          url={window.location.href}
+          linkInfo={{
+            name: "SG Youth AI",
+            href: window.location.href,
+          }}
           icon={<Ellipsis />}
         ></ShareButton>
       </div>
@@ -92,7 +95,7 @@ export default function LinkInBio() {
         <div className="flex flex-col w-full py-7 gap-6">
           {links.map((e, idx) => {
             return (
-              <Link to={e.href} key={e.name + idx}>
+              <Link to={e.href} key={e.name + idx} target="_blank">
                 <Button
                   variant="secondary"
                   className="w-full px-6 py-6 text-lg h-[4.5rem] relative rounded-xl"
