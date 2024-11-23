@@ -13,6 +13,9 @@
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-navigation-menu": "^1.2.1",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-hook/media-query": "^1.1.1",
+    "@tailwindcss/postcss": "^4.0.0-beta.2",
+    "@tailwindcss/vite": "^4.0.0-beta.2",
     "aos": "^3.0.0-beta.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -21,8 +24,10 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
     "react-router-hash-link": "^2.4.3",
+    "react-share": "^5.1.1",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -38,7 +43,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^4.0.0-beta.2",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10"
