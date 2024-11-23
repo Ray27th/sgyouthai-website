@@ -11,7 +11,7 @@ export default function Hero() {
         backgroundImage: `url(${heroBG})`,
       }}
     >
-      <div className="w-full h-full " data-aos="fade-up">
+      <div className="w-full h-full" data-aos="fade-up">
         <div className="w-full flex flex-col-reverse md:flex-row absolute left-0 top-1/2 -translate-y-1/2 px-5 mt-10 md:mt-0 lg:px-24 justify-around items-center gap-2">
           <div
             className="md:w-1/2 max-w-[700px]  w-full flex flex-col gap-8 items-center justify-center md:items-start"

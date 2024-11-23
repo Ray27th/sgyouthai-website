@@ -86,7 +86,7 @@ export default function Team() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {team.map((e, idx) => {
           return (
-            <Link to={e.linkedin} key={"Team" + idx}>
+            <Link target="_blank" to={e.linkedin} key={"Team" + idx}>
               <div
                 className="flex flex-col gap-1 items-center justify-center bg-white p-5 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-100"
               >

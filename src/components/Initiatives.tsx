@@ -17,7 +17,7 @@ export default function About() {
           applications, participants will embark on a journey to master AI
           technologies and their implementation in real-world scenarios. Keen to
           learn more Sign up as a volunteer trainer or participant{" "}
-          <Link to="https://forms.gle/h99vGD7CjD5pyNGF7" className="text-blue-500">
+          <Link target="_blank" to="https://forms.gle/h99vGD7CjD5pyNGF7" className="text-blue-500">
             here!
           </Link>
         </p>

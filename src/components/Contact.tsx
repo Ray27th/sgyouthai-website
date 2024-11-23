@@ -1,18 +1,33 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Instagram, Linkedin } from "lucide-react";
+import {
+  FaTelegramPlane,
+  FaDiscord,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Contact() {
   const socials = [
     {
       name: "Instagram",
-      icon: <Instagram style={{ width: "1.15rem", height: "1.15rem" }} />,
+      icon: <FaInstagram style={{ width: "1.15rem", height: "1.15rem" }} />,
       href: "https://www.instagram.com/sgyouthai/",
     },
     {
       name: "LinkedIn",
-      icon: <Linkedin style={{ width: "1.15rem", height: "1.15rem" }} />,
+      icon: <FaLinkedin style={{ width: "1.15rem", height: "1.15rem" }} />,
       href: "https://www.linkedin.com/company/sgyouthai",
+    },
+    {
+      name: "Telegram",
+      icon: <FaTelegramPlane style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://t.me/sgyouthai",
+    },
+    {
+      name: "Discord",
+      icon: <FaDiscord style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://discord.gg/TacK5vbeDc",
     },
   ];
 
@@ -45,7 +60,7 @@ export default function Contact() {
                     key={"Social" + e.name}
                     className="rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
-                    <Link to={e.href}>{e.icon}</Link>
+                    <Link to={e.href} target="_blank">{e.icon}</Link>
                   </Button>
                 );
               })}
