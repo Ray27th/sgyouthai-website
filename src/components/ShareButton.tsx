@@ -12,7 +12,6 @@ import {
 import {
   Drawer,
   DrawerContent,
-  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -237,9 +236,112 @@ export default function ShareButton({
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Share link</DrawerTitle>
-          <DrawerDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DrawerDescription>
+          <div className="inline-flex justify-center w-full px-5">
+            {linkInfo && (
+              <Link
+                to={linkInfo.href}
+                target="_blank"
+                className="w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
+                style={{
+                  border: "1px solid gainsboro",
+                  transition:
+                    "transform 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 700ms linear",
+                }}
+              >
+                <div className="flex flex-col items-center self-stretch justify-center gap-4">
+                  <div className="flex flex-col items-center self-stretch justify-center gap-2">
+                    <h3 className="text-center text-black text-lg font-bold text-balance leading-[120%]">
+                      {linkInfo.name}
+                    </h3>
+                    <p className="overflow-hidden text-black text-center text-base text-ellipsis whitespace-nowrap leading-[150%] w-[min(90%,13ch)]">
+                      {linkInfo.href}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            )}
+          </div>
+          <div className="max-w-[320px] mx-auto flex flex-col gap-4 self-stretch py-6 overflow-x-scroll">
+            <div className="flex items-center gap-2">
+              <Button
+                variant="secondary"
+                size="icon"
+                onClick={() => scrollContainer("left")}
+                className="h-8 w-8"
+              >
+                <ChevronLeft size={20} />
+              </Button>
+              <div
+                ref={scrollRef}
+                className="flex items-start gap-4 overflow-hidden scroll-snap-x w-full"
+                style={{ scrollBehavior: "smooth" }}
+              >
+                <div
+                  className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black"
+                  onClick={handleCopyLink}
+                >
+                  <Button
+                    size="icon"
+                    className="h-12 w-12 rounded-full"
+                    variant={"secondary"}
+                  >
+                    {copied ? (
+                      <Check
+                        style={{ width: "24px", height: "24px" }}
+                        color="green"
+                      />
+                    ) : (
+                      <LinkIcon style={{ width: "24px", height: "24px" }} />
+                    )}
+                  </Button>
+                  <div
+                    className={cn(
+                      "whitespace-nowrap text-center text-xs font-medium",
+                      copied ? "text-[green]" : "text-black"
+                    )}
+                  >
+                    {copied ? "Copied" : "Copy Link"}
+                  </div>
+                </div>
+                {socials.map((e, idx) => {
+                  return (
+                    <div
+                      key={e.name + idx}
+                      className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black"
+                    >
+                      <e.button url={linkInfo.href}>
+                        <e.icon size={48} round />
+                      </e.button>
+                      <div className="whitespace-nowrap text-center text-xs font-medium">
+                        {e.name}
+                      </div>
+                    </div>
+                  );
+                })}
+                <div className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black">
+                  <Button
+                    size="icon"
+                    className="h-12 w-12 rounded-full"
+                    variant={"secondary"}
+                    onClick={handleMoreShare}
+                  >
+                    <Share style={{ width: "24px", height: "24px" }} />
+                  </Button>
+                  <div className="whitespace-nowrap text-center text-xs font-medium">
+                    More
+                  </div>
+                </div>
+              </div>
+              <Button
+                variant="secondary"
+                size="icon"
+                onClick={() => scrollContainer("right")}
+                className="h-8 w-8"
+              >
+                <ChevronRight size={20} />
+              </Button>
+            </div>
+          </div>
         </DrawerHeader>
       </DrawerContent>
     </Drawer>
