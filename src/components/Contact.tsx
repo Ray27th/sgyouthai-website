@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
+import ReactGA from "react-ga";
 
 export default function Contact() {
   const socials = [
@@ -49,7 +50,15 @@ export default function Contact() {
           <div className="w-full md:w-1/2 flex flex-col gap-5">
             <p>
               <span className="font-bold">Email:</span>{" "}
-              <Link to={"mailto:hello@Singaporeyouthai.org"}>
+              <Link
+                to={"mailto:hello@Singaporeyouthai.org"}
+                onClick={() => {
+                  ReactGA.event({
+                    category: "User",
+                    action: "Clicked on Email",
+                  });
+                }}
+              >
                 hello@Singaporeyouthai.org
               </Link>
             </p>
@@ -58,9 +67,17 @@ export default function Contact() {
                 return (
                   <Button
                     key={"Social" + e.name}
+                    onClick={() => {
+                      ReactGA.event({
+                        category: "User",
+                        action: "Clicked " + e.name,
+                      });
+                    }}
                     className="rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
-                    <Link to={e.href} target="_blank">{e.icon}</Link>
+                    <Link to={e.href} target="_blank">
+                      {e.icon}
+                    </Link>
                   </Button>
                 );
               })}

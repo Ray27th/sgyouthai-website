@@ -3,8 +3,11 @@ import Home from "./pages/Home";
 import Error from "./pages/404";
 import LinkInBio from "./pages/LinkInBio";
 import Layout from "./pages/Layout";
+import usePageTracking from "@/hooks/use-page-tracking";
 
 function App() {
+  usePageTracking();
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

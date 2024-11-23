@@ -12,6 +12,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import ShareButton from "@/components/ShareButton";
+import ReactGA from "react-ga";
 
 export default function LinkInBio() {
   const socials = [
@@ -115,6 +116,12 @@ export default function LinkInBio() {
                   variant="secondary"
                   className="w-full px-6 py-6 text-lg h-[4.5rem] relative rounded-xl"
                   size="lg"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "User",
+                      action: "Linkinbio: " + e.name,
+                    });
+                  }}
                 >
                   <span>{e.name}</span>
                   <ShareButton
@@ -135,6 +142,12 @@ export default function LinkInBio() {
               <Button
                 key={"Social" + e.name}
                 className="rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "User",
+                    action: "Clicked " + e.name,
+                  });
+                }}
               >
                 <Link to={e.href}>{e.icon}</Link>
               </Button>
