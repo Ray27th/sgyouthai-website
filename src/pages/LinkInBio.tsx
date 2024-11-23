@@ -45,7 +45,7 @@ export default function LinkInBio() {
     },
     {
       name: "Discord",
-      href: "https://t.me/sgyouthai",
+      href: "https://discord.gg/TacK5vbeDc",
     },
     {
       name: "Website",
