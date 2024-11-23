@@ -261,19 +261,11 @@ export default function ShareButton({
               </Link>
             )}
           </div>
-          <div className="max-w-[320px] mx-auto flex flex-col gap-4 self-stretch py-6 overflow-x-scroll">
+          <div className="max-w-[320px] mx-auto flex flex-col gap-4 self-stretch py-6 overflow-hidden">
             <div className="flex items-center gap-2">
-              <Button
-                variant="secondary"
-                size="icon"
-                onClick={() => scrollContainer("left")}
-                className="h-8 w-8"
-              >
-                <ChevronLeft size={20} />
-              </Button>
               <div
                 ref={scrollRef}
-                className="flex items-start gap-4 overflow-hidden scroll-snap-x w-full"
+                className="flex items-start gap-4 overflow-auto scroll-snap-x w-full"
                 style={{ scrollBehavior: "smooth" }}
               >
                 <div
@@ -332,14 +324,6 @@ export default function ShareButton({
                   </div>
                 </div>
               </div>
-              <Button
-                variant="secondary"
-                size="icon"
-                onClick={() => scrollContainer("right")}
-                className="h-8 w-8"
-              >
-                <ChevronRight size={20} />
-              </Button>
             </div>
           </div>
         </DrawerHeader>
