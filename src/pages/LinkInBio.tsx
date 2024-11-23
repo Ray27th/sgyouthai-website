@@ -5,20 +5,35 @@ import { Link } from "react-router-dom";
 import heroBG from "@/assets/hero-bg.png";
 import SYAILogo from "@/assets/SYAI Logo.jpg";
 import { EllipsisVertical, Ellipsis, Bell } from "lucide-react";
-import { Instagram, Linkedin } from "lucide-react";
+import {
+  FaTelegramPlane,
+  FaDiscord,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 import ShareButton from "@/components/ShareButton";
 
 export default function LinkInBio() {
   const socials = [
     {
       name: "Instagram",
-      icon: <Instagram style={{ width: "1.15rem", height: "1.15rem" }} />,
+      icon: <FaInstagram style={{ width: "1.15rem", height: "1.15rem" }} />,
       href: "https://www.instagram.com/sgyouthai/",
     },
     {
       name: "LinkedIn",
-      icon: <Linkedin style={{ width: "1.15rem", height: "1.15rem" }} />,
+      icon: <FaLinkedin style={{ width: "1.15rem", height: "1.15rem" }} />,
       href: "https://www.linkedin.com/company/sgyouthai",
+    },
+    {
+      name: "Telegram",
+      icon: <FaTelegramPlane style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://t.me/sgyouthai",
+    },
+    {
+      name: "Discord",
+      icon: <FaDiscord style={{ width: "1.15rem", height: "1.15rem" }} />,
+      href: "https://discord.gg/TacK5vbeDc",
     },
   ];
 
