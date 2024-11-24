@@ -10,8 +10,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/",
-      "has": [{ "type": "not", "value": "path", "key": "ingest" }]
+      "destination": "/"
     }
   ]
 }
