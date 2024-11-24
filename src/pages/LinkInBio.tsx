@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import ShareButton from "@/components/ShareButton";
 import ReactGA from "react-ga";
+import { trackEvent } from "@/lib/posthog";
 
 export default function LinkInBio() {
   const socials = [
@@ -121,6 +122,7 @@ export default function LinkInBio() {
                       category: "User",
                       action: "Linkinbio: " + e.name,
                     });
+                    trackEvent("linkinbio", { link: e.href, name: e.name });
                   }}
                 >
                   <span>{e.name}</span>
@@ -147,6 +149,7 @@ export default function LinkInBio() {
                     category: "User",
                     action: "Clicked " + e.name,
                   });
+                  trackEvent("Clicked Socials", { link: e.href, name: e.name });
                 }}
               >
                 <Link to={e.href}>{e.icon}</Link>
