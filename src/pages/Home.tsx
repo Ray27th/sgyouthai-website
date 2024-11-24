@@ -12,8 +12,10 @@ import Contact from "@/components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Gallery from "@/components/Gallery";
+import { useVitePostHog } from "vite-plugin-posthog/react";
 
 export default function Home() {
+  const posthog = useVitePostHog();
   const [showTopButton, setShowTopButton] = useState(false);
 
   useEffect(() => {
@@ -33,6 +35,7 @@ export default function Home() {
   }, []);
 
   const scrollToTop = () => {
+    posthog?.capture("scroll up");
     window.scrollTo({
       top: 0,
       behavior: "smooth",
