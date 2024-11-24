@@ -15,7 +15,8 @@ ReactGA.initialize(TRACKING_ID, { debug: import.meta.env.PROD });
 
 // Initialise PostHog
 posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
-  api_host: import.meta.env.VITE_POSTHOG_HOST,
+  api_host: window.location.origin + "/ingest",
+  ui_host: import.meta.env.VITE_POSTHOG_HOST,
 });
 
 createRoot(document.getElementById("root")!).render(
