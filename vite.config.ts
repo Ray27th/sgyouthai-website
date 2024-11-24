@@ -12,7 +12,6 @@ export default ({ mode }: { mode: string }) => {
       vitePostHog({
         apiKey: process.env.VITE_POSTHOG_KEY || "", //Required
         hostUrl: process.env.VITE_POSTHOG_API_HOST || "", //Required
-        isCheckingForDevMode: mode === "development", // optional
         config: {
           autocapture: true,
           capture_pageview: true,
