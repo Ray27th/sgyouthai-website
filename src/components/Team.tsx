@@ -27,10 +27,10 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/cleveland-law-a381ab242/",
     },
     {
-      name: "Dex Yang",
-      position: "Head of Events",
-      img: "team/Dex.png",
-      linkedin: "https://www.linkedin.com",
+      name: "Kaleb Nim",
+      position: "Head of Community",
+      img: "team/Kaleb.jpeg",
+      linkedin: "https://www.linkedin.com/in/kaleb-nim/",
     },
     {
       name: "Xie Kaiwen",
@@ -82,14 +82,14 @@ export default function Team() {
       data-aos="fade-up"
     >
       <h2 className="text-4xl text-center font-medium">Our Team</h2>
-      <p className="text-center py-5">Meet the team behind Singapore Youth AI</p>
+      <p className="text-center py-5">
+        Meet the team behind Singapore Youth AI
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {team.map((e, idx) => {
           return (
             <Link target="_blank" to={e.linkedin} key={"Team" + idx}>
-              <div
-                className="flex flex-col gap-1 items-center justify-center bg-white p-5 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-100"
-              >
+              <div className="flex flex-col gap-1 items-center justify-center bg-white p-5 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-100">
                 <img
                   src={e.img}
                   className="rounded-full aspect-square w-44 object-cover mb-2"
