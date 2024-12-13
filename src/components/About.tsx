@@ -33,8 +33,8 @@ export default function About() {
           <p>
             We aim to democratize AI knowledge through comprehensive programs
             and seminars, and mentorship opportunities, encouraging young people
-            to engage in projects that contribute to Singapore's technological
-            advancement and societal well-being.
+            to engage in projects that contribute to Singapore&apos;s
+            technological advancement and societal well-being.
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function About() {
             program. Our foundation was inspired by the vibrant engagements and
             discussions within the AI community, where many young enthusiasts
             gathered yet lacked a unified platform. From our initial eight
-            members, we've grown into a thriving community of 600 youths and we
+            members, we&apos;ve grown into a thriving community of 600 youths and we
             only continue to grow!
           </p>
           <p>
