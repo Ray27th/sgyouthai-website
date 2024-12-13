@@ -16,7 +16,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   EmailIcon,
   EmailShareButton,
@@ -47,7 +47,6 @@ interface ShareButtonProps extends ButtonProps {
 export default function ShareButton({
   icon,
   linkInfo,
-  children,
   ...props
 }: ShareButtonProps) {
   const [open, setOpen] = useState(false);
@@ -90,7 +89,7 @@ export default function ShareButton({
     }
   };
 
-  let socials = [
+  const socials = [
     { name: "Whatsapp", icon: WhatsappIcon, button: WhatsappShareButton },
     { name: "Telegram", icon: TelegramIcon, button: TelegramShareButton },
     {
@@ -117,7 +116,7 @@ export default function ShareButton({
             <div className="inline-flex justify-center w-full px-5">
               {linkInfo && (
                 <Link
-                  to={linkInfo.href}
+                  href={linkInfo.href}
                   target="_blank"
                   className="w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
                   style={{
@@ -239,7 +238,7 @@ export default function ShareButton({
           <div className="inline-flex justify-center w-full px-5">
             {linkInfo && (
               <Link
-                to={linkInfo.href}
+                href={linkInfo.href}
                 target="_blank"
                 className="w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
                 style={{

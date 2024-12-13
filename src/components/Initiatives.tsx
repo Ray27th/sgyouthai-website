@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -17,17 +17,21 @@ export default function About() {
           applications, participants will embark on a journey to master AI
           technologies and their implementation in real-world scenarios. Keen to
           learn more Sign up as a volunteer trainer or participant{" "}
-          <Link target="_blank" to="https://forms.gle/h99vGD7CjD5pyNGF7" className="text-blue-500">
+          <Link
+            target="_blank"
+            href="https://forms.gle/h99vGD7CjD5pyNGF7"
+            className="text-blue-500"
+          >
             here!
           </Link>
         </p>
         <p className="text-center md:text-left">
           SYAI Innovate: SYAI Innovate is Singapore Youth AI’s AI For Good
-          program designed to empower Singapore's youth to harness artificial
+          program designed to empower Singapore&apos;s youth to harness artificial
           intelligence for societal betterment in Singapore, fostering an
           open-source environment where ideas and solutions flourish. We warmly
           invite you to register your interest, join our growing collective, and
-          contribute to shaping a future where technology serves humanity's
+          contribute to shaping a future where technology serves humanity&apos;s
           greatest needs.
         </p>
       </div>

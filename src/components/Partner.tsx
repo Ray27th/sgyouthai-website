@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Partner() {
   const partners = [
     { id: 1, src: "/partner/ai-singapore-logo.png", alt: "AI Singapore Logo" },
@@ -26,9 +28,11 @@ export default function Partner() {
               key={partner.id}
               className="flex flex-grow w-full md:w-1/3 items-center justify-center bg-white border-[#d6eaff] border p-8"
             >
-              <img
+              <Image
                 src={partner.src}
                 alt={partner.alt}
+                width={1000}
+                height={1000}
                 className=" h-32 object-contain hover:scale-125 transition-all duration-500"
               />
             </div>

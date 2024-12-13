@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
-import heroBG from "@/assets/hero-bg.png";
-import heroImg from "@/assets/hero-img.svg";
-import { HashLink } from "react-router-hash-link";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <div
       className="h-[95vh] bg-cover relative bg-bottom bg-no-repeat"
       style={{
-        backgroundImage: `url(${heroBG})`,
+        backgroundImage: `url(/hero-bg.png)`,
       }}
     >
       <div className="w-full h-full" data-aos="fade-up">
@@ -24,13 +23,14 @@ export default function Hero() {
               solve real-world problems using AI
             </h2>
             <Button variant={"secondary"} asChild>
-              <HashLink to={"#About"} smooth>
-                Read More
-              </HashLink>
+              <Link href={"#About"}>Read More</Link>
             </Button>
           </div>
-          <img
-            src={heroImg}
+          <Image
+            width={1000}
+            height={1000}
+            alt="hero"
+            src={"/hero-img.svg"}
             className="md:w-1/2 max-w-[800px] w-full"
             data-aos="zoom-out"
             data-aos-delay="200"

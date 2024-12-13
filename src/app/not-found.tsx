@@ -1,29 +1,31 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 function Error() {
   const [countdown, setCountdown] = useState(3);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     // Use setTimeout to delay the redirection
     const timeoutId = setTimeout(() => {
-      navigate(-1);
-    }, countdown * 1000); // 5000 milliseconds = 5 seconds
+      router.back(); // Navigate back in the history stack
+    }, countdown * 1000);
 
     const intervalId = setInterval(() => {
       setCountdown((prevCountdown) => prevCountdown - 1);
     }, 1000); // Update countdown every 1 second
 
-    // Cleanup function to clear the timeout if the component unmounts before redirection
+    // Cleanup function to clear the timeout and interval
     return () => {
       clearTimeout(timeoutId);
       clearInterval(intervalId);
     };
-  }, [navigate]);
+  }, [router, countdown]);
 
   return (
-    <div className="justify-center items-center flex flex-col h-[100svh] gap-2">
+    <div className="justify-center items-center flex flex-col h-screen gap-2">
       <h1 className="text-4xl font-bold">404 Not Found</h1>
       <p>Redirecting in {countdown} seconds...</p>
     </div>

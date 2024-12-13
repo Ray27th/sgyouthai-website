@@ -1,5 +1,4 @@
-import aboutImg1 from "@/assets/about-extra-1.svg";
-import aboutImg2 from "@/assets/about-extra-2.svg";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -9,8 +8,11 @@ export default function About() {
     >
       <h2 className="text-4xl text-center font-medium">About Us</h2>
       <div className="flex flex-col md:flex-row pt-12 gap-6 justify-center items-center">
-        <img
-          src={aboutImg1}
+        <Image
+          width={1000}
+          height={1000}
+          alt="about1"
+          src="/about-extra-1.svg"
           data-aos="fade-right"
           className="w-full md:w-5/12"
         />
@@ -31,8 +33,8 @@ export default function About() {
           <p>
             We aim to democratize AI knowledge through comprehensive programs
             and seminars, and mentorship opportunities, encouraging young people
-            to engage in projects that contribute to Singapore's technological
-            advancement and societal well-being.
+            to engage in projects that contribute to Singapore&apos;s
+            technological advancement and societal well-being.
           </p>
         </div>
       </div>
@@ -48,7 +50,7 @@ export default function About() {
             program. Our foundation was inspired by the vibrant engagements and
             discussions within the AI community, where many young enthusiasts
             gathered yet lacked a unified platform. From our initial eight
-            members, we've grown into a thriving community of 600 youths and we
+            members, we&apos;ve grown into a thriving community of 600 youths and we
             only continue to grow!
           </p>
           <p>
@@ -60,8 +62,11 @@ export default function About() {
             impactful.
           </p>
         </div>
-        <img
-          src={aboutImg2}
+        <Image
+          width={1000}
+          height={1000}
+          alt="about2"
+          src="/about-extra-2.svg"
           data-aos="fade-left"
           className="w-full md:w-5/12"
         />

@@ -5,14 +5,12 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
-import Logo from "@/assets/logo.png";
-import { scrollWithOffset } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
-  const link = [
-    { href: "#", name: "Home" },
+  const links = [
+    { href: "#Home", name: "Home" },
     { href: "#About", name: "About" },
     { href: "#Initiatives", name: "Initiatives" },
     { href: "#Team", name: "Team" },
@@ -22,25 +20,30 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full max-w-[100vw] top-0 left-0 right-0 z-10 h-[80px] shadow-md">
-      <Link to="/" className="flex items-center gap-2 w-max">
-        <img src={Logo} className="h-[3.25rem] w-[3.25rem]" />
+    <div
+      id="Home"
+      className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full max-w-[100vw] top-0 left-0 right-0 z-10 h-[80px] shadow-md"
+    >
+      <Link href="/" className="flex items-center gap-2 w-max">
+        <Image
+          src="/logo.png"
+          width={1000}
+          height={1000}
+          className="h-[3.25rem] w-[3.25rem]"
+          alt="Logo"
+        />
         <span className="text-base font-semibold">Singapore Youth AI</span>
       </Link>
       <div className="hidden md:flex gap-8 items-center">
-        {link.map((e, i) => {
-          return (
-            <NavHashLink
-              key={"URL" + i + e.name}
-              to={e.href}
-              smooth
-              className="text-base hover:underline underline-offset-4"
-              scroll={(el) => scrollWithOffset(el)}
-            >
-              {e.name}
-            </NavHashLink>
-          );
-        })}
+        {links.map((link, index) => (
+          <Link
+            key={"URL" + index + link.name}
+            href={link.href}
+            className="text-base hover:underline underline-offset-4"
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
       <Sheet>
         <SheetTrigger asChild>
@@ -51,21 +54,16 @@ export default function Navbar() {
         </SheetTrigger>
         <SheetContent side="left">
           <div className="grid gap-4 w-[200px] px-2 py-4">
-            {link.map((e, i) => {
-              return (
-                <SheetClose asChild>
-                  <NavHashLink
-                    key={"Link" + i + e.name}
-                    to={e.href}
-                    className="text-lg hover:underline underline-offset-4"
-                    scroll={(el) => scrollWithOffset(el)}
-                    smooth
-                  >
-                    {e.name}
-                  </NavHashLink>
-                </SheetClose>
-              );
-            })}
+            {links.map((link, index) => (
+              <SheetClose asChild key={index}>
+                <Link
+                  href={link.href}
+                  className="text-lg hover:underline underline-offset-4"
+                >
+                  {link.name}
+                </Link>
+              </SheetClose>
+            ))}
           </div>
         </SheetContent>
       </Sheet>
@@ -73,9 +71,7 @@ export default function Navbar() {
   );
 }
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-function MenuIcon(props: IconProps) {
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
