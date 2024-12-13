@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import { cn } from "@/lib/utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { PostHogProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +36,7 @@ export default function RootLayout({
         `}
       </Script>
       <body className={cn(inter.className, "fullHeight")}>
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
         <SpeedInsights />
       </body>
     </html>
