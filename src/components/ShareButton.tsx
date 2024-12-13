@@ -47,7 +47,6 @@ interface ShareButtonProps extends ButtonProps {
 export default function ShareButton({
   icon,
   linkInfo,
-  children,
   ...props
 }: ShareButtonProps) {
   const [open, setOpen] = useState(false);
@@ -90,7 +89,7 @@ export default function ShareButton({
     }
   };
 
-  let socials = [
+  const socials = [
     { name: "Whatsapp", icon: WhatsappIcon, button: WhatsappShareButton },
     { name: "Telegram", icon: TelegramIcon, button: TelegramShareButton },
     {
