@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --radius: 0.5rem;
@@ -24,5 +20,6 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
