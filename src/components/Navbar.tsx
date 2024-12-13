@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const links = [
-    { href: "#", name: "Home" },
+    { href: "#Home", name: "Home" },
     { href: "#About", name: "About" },
     { href: "#Initiatives", name: "Initiatives" },
     { href: "#Team", name: "Team" },
@@ -20,7 +20,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full max-w-[100vw] top-0 left-0 right-0 z-10 h-[80px] shadow-md">
+    <div
+      id="Home"
+      className="flex items-center justify-between px-3 md:px-8 py-4 bg-white dark:bg-gray-800 fixed w-full max-w-[100vw] top-0 left-0 right-0 z-10 h-[80px] shadow-md"
+    >
       <Link href="/" className="flex items-center gap-2 w-max">
         <Image
           src="/logo.png"

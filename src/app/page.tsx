@@ -13,7 +13,7 @@ import Contact from "@/components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Gallery from "@/components/Gallery";
-import Link from "next/link";
+import ScrollTopButton from "@/components/ScrollTopButton";
 
 export default function Home() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -33,13 +33,6 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
     AOS.init({
@@ -86,14 +79,7 @@ export default function Home() {
       </div>
 
       {/* Return to Top Button */}
-      {showTopButton && (
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 z-50 rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-        >
-          <Link href={"#"}>↑</Link>
-        </Button>
-      )}
+      {showTopButton && <ScrollTopButton />}
     </>
   );
 }
