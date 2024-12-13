@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Initiatives from "@/components/Initiatives";
