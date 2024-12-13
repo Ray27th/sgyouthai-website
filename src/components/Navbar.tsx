@@ -67,9 +67,8 @@ export default function Navbar() {
     </div>
   );
 }
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
-function MenuIcon(props: IconProps) {
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
