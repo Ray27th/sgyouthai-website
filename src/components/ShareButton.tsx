@@ -38,6 +38,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 
 interface ShareButtonProps extends ButtonProps {
   icon?: React.ReactNode;
@@ -49,24 +50,28 @@ export default function ShareButton({
   linkInfo,
   ...props
 }: ShareButtonProps) {
+  const posthog = usePostHog();
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const scrollRef = useRef<HTMLDivElement>(null); // Ref for scrollable container
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    posthog?.capture(`Clicked ShareButton: ${linkInfo.name}`);
     e.stopPropagation();
     e.preventDefault();
     setOpen((prev) => !prev);
   };
 
   const handleCopyLink = () => {
+    posthog?.capture(`Copied links: ${linkInfo.name}`);
     navigator.clipboard.writeText(linkInfo.href);
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   };
 
   const handleMoreShare = () => {
+    posthog?.capture(`Enter MoreShare: ${linkInfo.name}`);
     if (navigator.share) {
       navigator
         .share({
@@ -81,6 +86,9 @@ export default function ShareButton({
   };
 
   const scrollContainer = (direction: "left" | "right") => {
+    posthog?.capture(
+      `Scroll Container Direction ${linkInfo.name}: ${direction}`
+    );
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         left: direction === "left" ? -300 : 300,
@@ -118,19 +126,24 @@ export default function ShareButton({
                 <Link
                   href={linkInfo.href}
                   target="_blank"
-                  className="w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
+                  className="ph-no-capture w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
                   style={{
                     border: "1px solid gainsboro",
                     transition:
                       "transform 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 700ms linear",
                   }}
+                  onClick={() => {
+                    posthog?.capture(
+                      `Clicked ShareButton LinkInBio: ${linkInfo.name}`
+                    );
+                  }}
                 >
-                  <div className="flex flex-col items-center self-stretch justify-center gap-4">
-                    <div className="flex flex-col items-center self-stretch justify-center gap-2">
-                      <h3 className="text-center text-black text-lg font-bold text-balance leading-[120%]">
+                  <div className="ph-no-capture flex flex-col items-center self-stretch justify-center gap-4">
+                    <div className="ph-no-capture flex flex-col items-center self-stretch justify-center gap-2">
+                      <h3 className="ph-no-capture text-center text-black text-lg font-bold text-balance leading-[120%]">
                         {linkInfo.name}
                       </h3>
-                      <p className="overflow-hidden text-black text-center text-base text-ellipsis whitespace-nowrap leading-[150%] w-[min(90%,13ch)]">
+                      <p className="ph-no-capture overflow-hidden text-black text-center text-base text-ellipsis whitespace-nowrap leading-[150%] w-[min(90%,13ch)]">
                         {linkInfo.href}
                       </p>
                     </div>
@@ -144,9 +157,9 @@ export default function ShareButton({
                   variant="secondary"
                   size="icon"
                   onClick={() => scrollContainer("left")}
-                  className="h-8 w-8"
+                  className="h-8 w-8 ph-no-capture"
                 >
-                  <ChevronLeft size={20} />
+                  <ChevronLeft className="ph-no-capture" size={20} />
                 </Button>
                 <div
                   ref={scrollRef}
@@ -213,9 +226,9 @@ export default function ShareButton({
                   variant="secondary"
                   size="icon"
                   onClick={() => scrollContainer("right")}
-                  className="h-8 w-8"
+                  className="h-8 w-8 ph-no-capture"
                 >
-                  <ChevronRight size={20} />
+                  <ChevronRight className="ph-no-capture" size={20} />
                 </Button>
               </div>
             </div>
@@ -273,21 +286,25 @@ export default function ShareButton({
                 >
                   <Button
                     size="icon"
-                    className="h-12 w-12 rounded-full"
+                    className="ph-no-capture h-12 w-12 rounded-full"
                     variant={"secondary"}
                   >
                     {copied ? (
                       <Check
                         style={{ width: "24px", height: "24px" }}
+                        className="ph-no-capture"
                         color="green"
                       />
                     ) : (
-                      <LinkIcon style={{ width: "24px", height: "24px" }} />
+                      <LinkIcon
+                        className="ph-no-capture"
+                        style={{ width: "24px", height: "24px" }}
+                      />
                     )}
                   </Button>
                   <div
                     className={cn(
-                      "whitespace-nowrap text-center text-xs font-medium",
+                      "ph-no-capture whitespace-nowrap text-center text-xs font-medium",
                       copied ? "text-[green]" : "text-black"
                     )}
                   >
@@ -300,8 +317,15 @@ export default function ShareButton({
                       key={e.name + idx}
                       className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black"
                     >
-                      <e.button url={linkInfo.href}>
-                        <e.icon size={48} round />
+                      <e.button
+                        url={linkInfo.href}
+                        onClick={() => {
+                          posthog?.capture(
+                            `Share ${linkInfo.href} to ${e.name}`
+                          );
+                        }}
+                      >
+                        <e.icon className="ph-no-capture" size={48} round />
                       </e.button>
                       <div className="whitespace-nowrap text-center text-xs font-medium">
                         {e.name}
@@ -312,13 +336,16 @@ export default function ShareButton({
                 <div className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black">
                   <Button
                     size="icon"
-                    className="h-12 w-12 rounded-full"
+                    className="ph-no-capture h-12 w-12 rounded-full"
                     variant={"secondary"}
                     onClick={handleMoreShare}
                   >
-                    <Share style={{ width: "24px", height: "24px" }} />
+                    <Share
+                      className="ph-no-capture"
+                      style={{ width: "24px", height: "24px" }}
+                    />
                   </Button>
-                  <div className="whitespace-nowrap text-center text-xs font-medium">
+                  <div className="ph-no-capture whitespace-nowrap text-center text-xs font-medium">
                     More
                   </div>
                 </div>

@@ -18,6 +18,8 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
       person_profiles: "always",
       capture_pageview: false,
       capture_pageleave: true,
+      autocapture: true,
+      enable_heatmaps: true,
     });
   }, []);
 
