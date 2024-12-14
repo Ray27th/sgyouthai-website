@@ -76,7 +76,7 @@ export default function ShareButton({
       navigator
         .share({
           title: linkInfo.name,
-          text: `Check this out: ${linkInfo.name}`,
+          text: `Check this out: SYAI's ${linkInfo.name}`,
           url: linkInfo.href,
         })
         .catch((err) => console.error("Error sharing:", err));
@@ -324,6 +324,7 @@ export default function ShareButton({
                             `Share ${linkInfo.href} to ${e.name}`
                           );
                         }}
+                        title={`SYAI's ${linkInfo.name}`}
                       >
                         <e.icon className="ph-no-capture" size={48} round />
                       </e.button>
