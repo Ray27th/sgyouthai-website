@@ -5,6 +5,7 @@ import Script from "next/script";
 import { cn } from "@/lib/utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PostHogProvider } from "./providers";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "fullHeight")}>
         <PostHogProvider>{children}</PostHogProvider>
         <SpeedInsights />
+        <Toaster richColors expand duration={2500} />
       </body>
     </html>
   );
