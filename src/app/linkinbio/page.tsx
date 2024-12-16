@@ -105,7 +105,7 @@ export default function LinkInBio() {
         )}
       >
         <Button
-          className="ph-no-capture rounded-full bg-neutral-900/55 hover:bg-neutral-900/35 dark:bg-neutral-50/55 dark:hover:bg-neutral-50/25"
+          className="rounded-full bg-neutral-900/55 hover:bg-neutral-900/35 dark:bg-neutral-50/55 dark:hover:bg-neutral-50/25"
           size="icon"
           onClick={() => {
             posthog?.capture("Clicked Notification Bell");
@@ -121,7 +121,7 @@ export default function LinkInBio() {
             name: "SG Youth AI",
             href: currentUrl, // Use state for the URL
           }}
-          icon={<Ellipsis className="ph-no-capture" />}
+          icon={<Ellipsis />}
         ></ShareButton>
       </div>
       <div className="container mx-auto p-5 max-w-2xl">
@@ -143,7 +143,7 @@ export default function LinkInBio() {
               key={e.name + idx}
               target="_blank"
               onClick={() => capture_linkInBio(e.name)}
-              className="ph-no-capture inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-neutral-300 bg-neutral-100 text-neutral-900 shadow-sm hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80 w-full px-6 py-6 text-lg h-[4.5rem] relative rounded-xl"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-neutral-300 bg-neutral-100 text-neutral-900 shadow-sm hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80 w-full px-6 py-6 text-lg h-[4.5rem] relative rounded-xl"
             >
               <span>{e.name}</span>
               <ShareButton
@@ -162,7 +162,7 @@ export default function LinkInBio() {
               asChild
               key={"Social" + e.name}
               onClick={() => capture_social(e.name)}
-              className="ph-no-capture rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="rounded-full aspect-square w-10 h-10 bg-blue-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <Link href={e.href} target="_blank">
                 {e.icon}
