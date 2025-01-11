@@ -43,6 +43,10 @@ export default function LinkInBio() {
 
   const links = [
     {
+      name: "CYS x SYAI Monthly AI Meetup (Jan 2025)",
+      href: "https://forms.gle/VBXpVgzeJgCpaxmM7",
+    },
+    {
       name: "Telegram",
       href: "https://t.me/sgyouthai",
     },
@@ -143,7 +147,7 @@ export default function LinkInBio() {
               key={e.name + idx}
               target="_blank"
               onClick={() => capture_linkInBio(e.name)}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-neutral-300 bg-neutral-100 text-neutral-900 shadow-sm hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80 w-full px-6 py-6 text-lg h-[4.5rem] relative rounded-xl"
+              className="inline-flex items-center justify-center gap-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-neutral-300 bg-neutral-100 text-neutral-900 shadow-sm hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80 w-full px-8 py-6 text-lg min-h-[4.5rem] relative rounded-xl text-center"
             >
               <span>{e.name}</span>
               <ShareButton
