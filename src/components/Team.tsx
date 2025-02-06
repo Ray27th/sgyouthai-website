@@ -37,7 +37,7 @@ export default function Team() {
       name: "Xie Kaiwen",
       position: "Head of Events",
       img: "/team/Kaiwen.png",
-      linkedin: "https://www.linkedin.com/",
+      linkedin: "https://www.linkedin.com/in/kaiwen-xie/",
     },
     {
       name: "Matthias Loong",
