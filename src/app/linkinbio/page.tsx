@@ -41,14 +41,11 @@ export default function LinkInBio() {
     },
   ];
 
-/*
-   {
-      name: "CYS x SYAI Monthly AI Meetup (Jan 2025)",
-      href: "https://forms.gle/VBXpVgzeJgCpaxmM7",
-    },
-*/
-
   const links = [
+    {
+      name: "CYS x SYAI Monthly AI Meetup (Feb 2025)",
+      href: "https://forms.gle/HusYVzNaSF74hqSG6",
+    },
     {
       name: "Telegram",
       href: "https://t.me/sgyouthai",
@@ -108,7 +105,7 @@ export default function LinkInBio() {
       <div
         className={cn(
           "fixed px-3 top-5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all max-w-2xl",
-          showHeader ? "opacity-1" : "opacity-0"
+          showHeader ? "opacity-1" : "opacity-0",
         )}
       >
         <Button
