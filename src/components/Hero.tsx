@@ -17,7 +17,7 @@ export default function Hero() {
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <h2 className="text-white text-4xl md:text-5xl xl:text-6xl font-semibold text-center md:text-left">
+            <h2 className="text-white text-4xl md:text-5xl 2xl:text-6xl font-semibold text-center md:text-left">
               Creating a community to{" "}
               <span className="underline text-[#74b5fc]">empower youth</span> to
               solve real-world problems using AI
