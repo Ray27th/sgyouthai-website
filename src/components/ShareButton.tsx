@@ -126,7 +126,7 @@ export default function ShareButton({
                 <Link
                   href={linkInfo.href}
                   target="_blank"
-                  className="ph-no-capture w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
+                  className="w-full flex-col bg-[rgb(243,243,241)] rounded-2xl p-6 shadow md:w-[327px] hover:scale-[1.01] hover:shadow-max-elevation-light shadow-low-elevation-light"
                   style={{
                     border: "1px solid gainsboro",
                     transition:
@@ -138,12 +138,12 @@ export default function ShareButton({
                     );
                   }}
                 >
-                  <div className="ph-no-capture flex flex-col items-center self-stretch justify-center gap-4">
-                    <div className="ph-no-capture flex flex-col items-center self-stretch justify-center gap-2">
-                      <h3 className="ph-no-capture text-center text-black text-lg font-bold text-balance leading-[120%]">
+                  <div className="flex flex-col items-center self-stretch justify-center gap-4">
+                    <div className=" flex flex-col items-center self-stretch justify-center gap-2">
+                      <h3 className=" text-center text-black text-lg font-bold text-balance leading-[120%]">
                         {linkInfo.name}
                       </h3>
-                      <p className="ph-no-capture overflow-hidden text-black text-center text-base text-ellipsis whitespace-nowrap leading-[150%] w-[min(90%,13ch)]">
+                      <p className=" overflow-hidden text-black text-center text-base text-ellipsis whitespace-nowrap leading-[150%] w-[min(90%,13ch)]">
                         {linkInfo.href}
                       </p>
                     </div>
@@ -157,9 +157,9 @@ export default function ShareButton({
                   variant="secondary"
                   size="icon"
                   onClick={() => scrollContainer("left")}
-                  className="h-8 w-8 ph-no-capture"
+                  className="h-8 w-8 "
                 >
-                  <ChevronLeft className="ph-no-capture" size={20} />
+                  <ChevronLeft className="" size={20} />
                 </Button>
                 <div
                   ref={scrollRef}
@@ -226,9 +226,9 @@ export default function ShareButton({
                   variant="secondary"
                   size="icon"
                   onClick={() => scrollContainer("right")}
-                  className="h-8 w-8 ph-no-capture"
+                  className="h-8 w-8 "
                 >
-                  <ChevronRight className="ph-no-capture" size={20} />
+                  <ChevronRight className="" size={20} />
                 </Button>
               </div>
             </div>
@@ -286,25 +286,25 @@ export default function ShareButton({
                 >
                   <Button
                     size="icon"
-                    className="ph-no-capture h-12 w-12 rounded-full"
+                    className=" h-12 w-12 rounded-full"
                     variant={"secondary"}
                   >
                     {copied ? (
                       <Check
                         style={{ width: "24px", height: "24px" }}
-                        className="ph-no-capture"
+                        className=""
                         color="green"
                       />
                     ) : (
                       <LinkIcon
-                        className="ph-no-capture"
+                        className=""
                         style={{ width: "24px", height: "24px" }}
                       />
                     )}
                   </Button>
                   <div
                     className={cn(
-                      "ph-no-capture whitespace-nowrap text-center text-xs font-medium",
+                      " whitespace-nowrap text-center text-xs font-medium",
                       copied ? "text-[green]" : "text-black"
                     )}
                   >
@@ -326,7 +326,7 @@ export default function ShareButton({
                         }}
                         title={`SYAI's ${linkInfo.name}`}
                       >
-                        <e.icon className="ph-no-capture" size={48} round />
+                        <e.icon className="" size={48} round />
                       </e.button>
                       <div className="whitespace-nowrap text-center text-xs font-medium">
                         {e.name}
@@ -337,16 +337,16 @@ export default function ShareButton({
                 <div className="flex w-[60px] flex-col items-center justify-center gap-1.5 px-[3px] outline-none focus-visible:ring-1 focus-visible:ring-black">
                   <Button
                     size="icon"
-                    className="ph-no-capture h-12 w-12 rounded-full"
+                    className=" h-12 w-12 rounded-full"
                     variant={"secondary"}
                     onClick={handleMoreShare}
                   >
                     <Share
-                      className="ph-no-capture"
+                      className=""
                       style={{ width: "24px", height: "24px" }}
                     />
                   </Button>
-                  <div className="ph-no-capture whitespace-nowrap text-center text-xs font-medium">
+                  <div className=" whitespace-nowrap text-center text-xs font-medium">
                     More
                   </div>
                 </div>
