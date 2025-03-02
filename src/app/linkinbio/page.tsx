@@ -43,9 +43,13 @@ export default function LinkInBio() {
 
   const links = [
     {
-      name: "CYS x SYAI Monthly AI Meetup (Feb 2025)",
-      href: "https://forms.gle/HusYVzNaSF74hqSG6",
+      name: "CYS x SYAI Monthly AI Meetup (Mar 2025)",
+      href: "https://forms.gle/FpKePiMijNLDtudV6",
     },
+    // {
+    //   name: "SYAI Recruitment",
+    //   href: "https://forms.gle/FpKePiMijNLDtudV6",
+    // },
     {
       name: "Telegram",
       href: "https://t.me/sgyouthai",
