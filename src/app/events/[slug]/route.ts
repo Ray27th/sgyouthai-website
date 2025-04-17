@@ -3,9 +3,9 @@ import type { NextRequest } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  context: { params: { slug: string } }
+  { params }: { params: { slug: string } }
 ) {
-  const { slug } = context.params;
+  const { slug } = params;
 
   let targetUrl = "/";
 
