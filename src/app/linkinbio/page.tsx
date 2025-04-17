@@ -44,7 +44,7 @@ export default function LinkInBio() {
   const links = [
     {
       name: "Echelon Singapore 2025 by e27",
-      href: "https://e27-dot-yamm-track.appspot.com/2wRbZvIkpK8tJ9Gga5xS3a4KoECgSwbJWeMlgC-zTrLP7uyYUlgHyrp4N5_EInwd19REmIL4GplqlWT15wvkk8j-6bzkg_x-SJzZEddEkfj8x76mf3zgcd7O3YgFL6jJu7xhlHzaGfHDM6Tuo-I_agGDCRcEokglkUCuER8l8QpuyYP5HmrxDeUqlIZEgzfBsYnuUsivp3cfe-i8XMe9WRoTWZsc",
+      href: "https://sgyouthai.org/events/echelon2025",
     },
     {
       name: "CYS x SYAI Monthly AI Meetup (Apr 2025)",
@@ -117,7 +117,7 @@ export default function LinkInBio() {
       <div
         className={cn(
           "fixed px-3 top-5 w-full container mx-auto left-1/2 -translate-x-1/2 flex justify-between transition-all max-w-2xl",
-          showHeader ? "opacity-1" : "opacity-0",
+          showHeader ? "opacity-1" : "opacity-0"
         )}
       >
         <Button
