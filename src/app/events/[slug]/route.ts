@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { slug: string } }
+  request: Request,
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = params;
+  const { slug } = await params;
 
   let targetUrl = "/";
 
